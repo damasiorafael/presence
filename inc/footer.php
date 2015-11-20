@@ -1,9 +1,9 @@
 <footer class="footer <?php if($pagAtiva == "empresa") echo "footer-fixed"; ?>">
       <div class="container">
-        <div class="col-lg-11 dados">
-          <p>043 3152 8740 | 043 9988 4850 | Av. Sanhaço Rei, N° 300, Jardim Santa Alice | Arapongas - PR</p>
+        <div class="col-lg-8 dados">
+          <p>043 3152 8740 | 043 8817 7575 | Av. Sanhaço Rei, N° 300, Jardim Santa Alice | Arapongas - PR</p>
         </div>
-        <div class="col-lg-1 logo-phorma">
+        <div class="col-lg-3 logo-phorma pull-right">
           <a href="http://www.phormadesign.com.br" target="_blank" class="pull-right">
             <img src="img/logo_phorma.png" class="pull-right" />
             <span>Phorma Design</span>
@@ -19,6 +19,9 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- jQuery Form -->
+    <script src="js/jquery.form.js"></script>
 
     <script src="js/presence.js"></script>
 

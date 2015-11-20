@@ -15,15 +15,25 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/HelveticaCd.eot');
+    src: url('../fonts/HelveticaCd.eot') format('embedded-opentype'),
+         url('../fonts/HelveticaCd.woff2') format('woff2'),
+         url('../fonts/HelveticaCd.woff') format('woff'),
+         url('../fonts/HelveticaCd.ttf') format('truetype'),
+         url('../fonts/HelveticaCd.svg#HelveticaCd') format('svg');
+}
+
 /* RESET */
 * {
   list-style: none;
   padding: 0;
   margin: 0;
   text-decoration: none;
-  outline: none;
+  outline: 0!important;
   color: #000;
-  font-family: "Fontastique Fontastique";
+  font-family: "Helvetica", sans-serif;
 }
 
 html, body {
@@ -44,6 +54,11 @@ h2 {
 
 .display-none {
   display: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .container {
@@ -144,6 +159,25 @@ header, .header {
   margin-top: 11px;
   color: #542b70;
   font-size: 13.8px;
+  font-family: "Fontastique Fontastique";
+}
+.menu-nav-corpo-index ul li {
+  width: 33.3333%!important;
+  float: left;
+}
+.menu-nav-corpo-index ul li a {
+  width: 100%;
+  float: left;
+}
+.menu-nav-corpo-index ul li a img {
+  margin: auto;
+  display: block;
+}
+.menu-nav-corpo-index ul li a span {
+  display: block;
+}
+.menu-nav-corpo-index ul li a:hover span, .menu-nav-corpo-index ul li a:hover {
+  text-decoration: none!important;
 }
 
 
@@ -163,13 +197,22 @@ footer, .footer {
 .footer .container {
   padding-left: 0;
   padding-right: 0;
+  position: relative;
 }
-
+.footer .container .dados {
+  width: 66.6667%!important;
+}
+.footer .container .logo-phorma {
+  width: 25%!important;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .footer .container .dados p {
   color: #FFF;
   line-height: 12.5px;
   font-size: 12.5px;
-  font-family: "Ubuntu Condensed", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-weight: bold;
   margin-top: 9px;
   margin-bottom: 0;
@@ -196,8 +239,8 @@ footer, .footer {
   position: fixed;
   bottom: 0;
 }
-.title-empresa {
-  font-family: "Ubuntu Condensed", sans-serif;
+.title-empresa, .title-representantes {
+  font-family: "Helvetica", sans-serif;
   font-size: 22.2px;
   margin-top: 60px;
 }
@@ -205,7 +248,7 @@ footer, .footer {
   padding-left: 55px;
   padding-right: 55px;
   margin-top: 30px;
-  font-family: "Ubuntu Condensed", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-family: 18px;
 }
 
@@ -217,7 +260,7 @@ footer, .footer {
 /*                                                                                      */
 /*--------------------------------------------------------------------------------------*/
 .container-produtos * {
-  font-family: "Ubuntu Condensed", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-weight:;
 }
 
@@ -241,7 +284,7 @@ footer, .footer {
 .container-produtos .menu-nav-filtros li:last-child, .container-produtos .menu-nav-filtros li:nth-child(4) {
   background: none;
 }
-.container-produtos .menu-nav-filtros a {
+.container-produtos .menu-nav-filtros a, .novidades {
   color: #000;
   font-size: 22.2px;
   padding-left: 16px;
@@ -265,6 +308,11 @@ footer, .footer {
 }
 .container-produtos .listagem-produtos .item-produto {
   margin-bottom: 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .container-produtos .listagem-produtos .item-produto a {
   
@@ -278,4 +326,317 @@ footer, .footer {
 }
 .container-produtos .listagem-produtos .item-produto span {
   font-size: 18px;
+}
+
+/*-----------------------------------------------------*/
+/* SLIDER PRODUTOS                                     */
+/*-----------------------------------------------------*/
+.lb-container {
+  padding: 30px!important;
+  font-family: "Helvetica", sans-serif!important;
+}
+.lb-container * {
+  font-family: "Helvetica", sans-serif!important;
+}
+
+.lb-caption h3, .lb-caption p {
+  font-family: "Helvetica", sans-serif!important;
+  font-weight: normal;
+}
+
+.lb-caption h3 {
+  font-size: 16px!important;
+  color: #000!important;
+  font-weight: bold;
+  padding-top: 0!important;
+  padding-bottom: 20px!important;
+  margin-top: 0!important;
+}
+
+.lb-outerContainer {
+  border: 0;
+  background-color: #FFF;
+  -webkit-border-radius: 0px!important;
+  -moz-border-radius: 0px!important;
+  -ms-border-radius: 0px!important;
+  -o-border-radius: 0px!important;
+  border-radius: 0px!important;
+}
+
+.lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+}
+.lb-container img {
+  max-width: 698px!important;
+  height: auto!important;
+}
+
+.lb-dataContainer {
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.lb-data {
+  padding: 0!important;
+}
+.lb-data .lb-details {
+  position: relative;
+  width: 100%!important;
+  height: auto;
+  background: #FFF;
+  padding: 30px!important;
+  padding-top: 0!important;
+  margin: 0!important;
+}
+
+.lb-data .lb-details span {
+  display: block;
+  color: #FFF;
+  font-size: 14px;
+}
+
+.lb-data .lb-close {
+  position: absolute!important;
+  right: -10px!important;
+  top: 7.5px!important;
+  background: url(../img/bt-close.png) no-repeat 0 0!important;
+  z-index: 9999!important;
+  opacity: 1!important
+}
+
+@media (max-width: 1024px){
+  .lb-data .lb-close {
+    
+  }
+}
+
+.lb-data .lb-close:hover {
+  opacity: 0.7;
+}
+
+.lb-data .lb-number {
+  display: none!important;
+}
+
+.lb-nav {
+  position: relative;
+}
+.lb-nav a.lb-next, .lb-nav a.lb-prev {
+  width: 14px!important;
+  height: 15px!important;
+  color: #000!important;
+  position: absolute!important;
+  top: 50%!important;
+  margin-top: -7.5px!important;
+  z-index: 9999!important;
+  display: block!important;
+  opacity: 1!important;
+}
+
+.lb-nav a.lb-prev {
+  background: url(../img/bt-prev.png) no-repeat 0 0!important;
+  margin-left: 7.5px;
+}
+.lb-nav a.lb-next {
+  background: url(../img/bt-next.png) no-repeat 0 0!important;
+  margin-right: 7.5px;
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+/*                                                                                      */
+/*    REPRESENTANTES                                                                    */
+/*                                                                                      */
+/*--------------------------------------------------------------------------------------*/
+.corpo-representantes {
+  min-height: 740px;
+}
+.container-representantes, .container-representantes, .map-representantes, .infos-representantes, .formulario-representantes, .form-rep, .tx-informa-form {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container-representantes {
+  margin-top: 8px;
+}
+
+.map-representantes {
+  padding-top: 165px;
+}
+
+.map-representantes .mapa {
+  position: absolute;
+  margin-left: 60px;
+  top: 0;
+  z-index: 9999;
+}
+
+.infos-representantes {
+  margin-top: 25px;
+}
+
+.item-representante h4, .item-representante span, .tx-informa-form {
+  font-family: "Helvetica", sans-serif;
+  display: block;
+  font-size: 18px;
+  line-height: 18px;
+  width: 100%;
+}
+
+.item-representante {}
+
+.item-representante h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.item-representante span {
+  line-height: 30px;
+}
+
+.tx-informa-form {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.form-rep {
+  margin-top: 17px;
+}
+.form-rep .form-group {
+ margin-bottom: 11px;
+}
+.form-rep .form-control {
+  border-color: #FBD271;
+  border-radius: 0;
+  color: #000!important;
+  font-size: 18px !important;
+  font-family: "Helvetica", sans-serif;
+  height: 31px;
+}
+.form-rep textarea.form-control {
+  height: 131px;
+}
+.form-rep .form-control:focus {
+  border-color: #542b70!important;
+  box-shadow: 0 0 8px #542b70!important;
+  outline: 0 none;
+}
+
+:-moz-placeholder {
+  color: #888888!important;
+  font-size: 18px!important;
+  font-family: "Helvetica", sans-serif;
+}
+*::-moz-placeholder {
+  color: #888888!important;
+  font-size: 18px!important;
+  font-family: "Helvetica", sans-serif;
+}
+
+.btn-envia-form {
+  color: #000!important;
+  font-size: 19px !important;
+  font-family: "Helvetica", sans-serif;
+  background-color: #FBD271;
+  border-color: #FBD271;
+  padding: 1px 33px;
+  border-radius: 0;
+}
+.btn-envia-form:hover {
+  border-color: #542b70!important;
+  background-color: #542b70!important;
+  color: #FFF!important;
+}
+
+
+
+/*--------------------------------------------------------------------------------------*/
+/*                                                                                      */
+/*    CONTATO                                                                           */
+/*                                                                                      */
+/*--------------------------------------------------------------------------------------*/
+.container-contato, .infos-contato, .formulario-contato, .formulario-trabalhe-conosco {
+  padding-left: 0;
+  padding-right: 0;
+  
+}
+
+.container-contato {
+  margin-top: 20px;
+}
+.infos-contato .item-representante span {
+  line-height: 29px;
+  font-size: 19.5px;
+}
+.infos-contato {
+  margin-top: 22px;
+}
+
+.map-contato {
+  
+}
+
+#map_canvas {
+  width: 420px;
+  height: 365px;
+  margin-top: 22px;
+}
+
+.formulario-contato form {
+  margin-top: 22px;
+}
+
+.formulario-trabalhe-conosco {
+  
+}
+
+.form-rep label {
+  font-family: "Helvetica", sans-serif;
+  font-size: 19px;
+  color: #000;
+}
+
+.form-rep .arquivo {
+  width: 335px;
+}
+
+
+
+/*-------------------------------------------------------------------------------*/
+/*                                                                               */
+/*        LOADING (DEIXAR SEMPRE POR ULTIMO)                                     */
+/*                                                                               */
+/*-------------------------------------------------------------------------------*/
+.loading-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9998;
+  background: #13316f;
+  top: 0;
+  left: 0;
+  opacity: .80;
+  display: none;
+}
+.loading {
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+  background: url(../img/loading.GIF) no-repeat 0 0 transparent;
+  z-index: 9999;
+  border-radius: 100%;
+  opacity: .70;
+  display: none;
 }
